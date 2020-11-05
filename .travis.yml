@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t aneez004/examapp3 .
+
+script:
+  - docker run aneez004/examapp3 nosetests tests  
+
+after_success:
+  - echo "$docker_password" | docker login -u "$docker_login" --password-stdin
+  - docker push aneez004/examapp3
