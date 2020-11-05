@@ -5,3 +5,5 @@ def Sum(number1, number2):
 
 def Random(number):
     return '%d%s' % (number, os.urandom(number))
+
+print ("PYthon is awesome")
