@@ -1,6 +1,7 @@
 dist: bionic
 os: linux
 language: python
+  - version: 2.7
 services:
   - docker
 
