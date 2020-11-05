@@ -1,12 +1,9 @@
 pipeline{  
     environment {
-    registry = "aneez004/dockerhub"
+    registry = "aneez004/pythonjenkins"
     }
   agent any
   stages {
-      
-      
-          }
      
            stage('Build') {
           
@@ -20,7 +17,7 @@ pipeline{
       
        stage('Publish') {
            environment {
-               registryCredential = 'dockerhub004'
+               registryCredential = 'dockerhub_id'
            }
            steps{
               
