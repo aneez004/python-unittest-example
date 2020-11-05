@@ -1,38 +1,14 @@
-pipeline{  
-    environment {
+environment {
     registry = "aneez004/pythonjenkins"
+    registryCredential = 'dockerhub_id'
+}
+
+stages {
+  stage('Building image') {
+    steps{
+      script {
+        docker.build registry + ":$BUILD_NUMBER"
+      }
     }
-  agent any
-  stages {
-     
-           stage('Build') {
-          
-           steps {
-                
-                   sh 'pwd'
-                   sh 'docker build .'
-                      }
-       }
-       
-      
-       stage('Publish') {
-           environment {
-               registryCredential = 'dockerhub_id'
-           }
-           steps{
-              
-              script {
-                 
-                  docker.withRegistry( '', registryCredential ) {
-                      def appimage = docker.build registry + ":$BUILD_NUMBER"
-                      appimage.push()
-                      
-                  }
-              }
-           }
-       }
-       
-           }
-       
-   
+  }
 }
