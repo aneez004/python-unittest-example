@@ -10,4 +10,6 @@ pip install -r requirements.txt
 2. run test by command    
 ```
 nosetest tests
+
+3. happy python
 ```
