@@ -11,5 +11,5 @@ pip install -r requirements.txt
 ```
 nosetest tests
 
-3. happy python github jenkins docker
+3. happy python github jenkins docker reporting
 ```
