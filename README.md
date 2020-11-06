@@ -11,5 +11,5 @@ pip install -r requirements.txt
 ```
 nosetest tests
 
-3. happy python jenkins
+3. happy python jenkins docker
 ```
