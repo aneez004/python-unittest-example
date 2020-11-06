@@ -1,9 +1,9 @@
-#import os
+import os
 
-#def Sum(number1, number2):
-#    return number1 + number2
+def Sum(number1, number2):
+    return number1 + number2
 
-#def Random(number):
- #   return '%d%s' % (number, os.urandom(number))
+def Random(number):
+    return '%d%s' % (number, os.urandom(number))
 
-print ("PYthon is extremely awesome")
+
